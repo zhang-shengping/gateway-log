@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: centos7
+  namespace: default
+spec:
+  containers:
+  - image: centos:7
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+    name: centos7
+  restartPolicy: Always
